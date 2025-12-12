@@ -1,0 +1,44 @@
+{
+  "name": "@devtools-at/byte-counter",
+  "version": "1.0.0",
+  "description": "Count bytes in text",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "byte-counter",
+    "devtools",
+    "utility",
+    "converter",
+    "encoder",
+    "decoder"
+  ],
+  "author": "DevTools.at",
+  "license": "MIT",
+  "homepage": "https://devtools.at/tools/byte-counter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devtools-at/byte-counter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devtools-at/byte-counter/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
